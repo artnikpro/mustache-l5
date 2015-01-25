@@ -18,7 +18,8 @@ class MustacheL5ServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->package('avatarguru/mustache-l5');
+		if (isset($this->package))
+			$this->package('avatarguru/mustache-l5');
 
 		$app = $this->app;
 
